@@ -2,14 +2,17 @@
 
 class Program
 {
-    static void Main(string[] args)
+    public static void Main(string[] args)
     {
         ClientSocket clientSocket = new ClientSocket();
         
         clientSocket.StartConnection();
+        
+        Console.WriteLine(clientSocket.ReceiveMessage());
 
         while (true)
         {
+            
             clientSocket.SendMessage(Console.ReadLine());
         }
     }

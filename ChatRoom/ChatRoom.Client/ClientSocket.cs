@@ -8,11 +8,17 @@ public class ClientSocket
 {
     private TcpClient _client;
 
+    private NetworkStream _networkStream;
+    
+    
+
     public void StartConnection()
     {
         try
         {
             _client = new TcpClient("localhost", 8888);
+            
+            _networkStream = _client.GetStream();
         }
         catch (Exception e)
         {
@@ -22,25 +28,43 @@ public class ClientSocket
         Console.WriteLine("Connected to server...");
     }
 
-    public void SendMessage(string message)
+    
+    
+    public void SendMessage(string? message)
     {
-        NetworkStream stream = _client.GetStream();
-        
         Console.Write("Enter your message: ");
         
         // Start reading user input and send it to the server
         try
         {
-            message = Console.ReadLine();
             byte[] data = Encoding.ASCII.GetBytes(message);
         
-            stream.Write(data, 0, data.Length);
+            _networkStream.Write(data, 0, data.Length);
             
-            stream.Flush();
+            _networkStream.Flush();
         }
         catch (Exception e)
         {
             Console.WriteLine(e.ToString());
         }
+    }
+
+    
+    
+    public string ReceiveMessage()
+    {
+        byte[] buffer = new byte[1024];
+        
+        int bytesRead = _networkStream.Read(buffer, 0, buffer.Length);
+        
+        return Encoding.ASCII.GetString(buffer, 0, bytesRead);
+    }
+
+    
+    
+    public void CloseConnection()
+    {
+        _networkStream.Close();
+        _client.Close();
     }
 }

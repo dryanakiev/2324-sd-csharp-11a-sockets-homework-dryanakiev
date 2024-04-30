@@ -26,4 +26,14 @@
       <ProjectReference Include="..\ChatRoom.Server\ChatRoom.Server.csproj" />
     </ItemGroup>
 
+    <ItemGroup>
+      <Content Include="obj\Debug\net8.0\ChatRoom.404774B2.Up2Date" />
+      <Content Include="obj\Debug\net8.0\ChatRoom.Tests.csproj.CoreCompileInputs.cache" />
+      <Content Include="obj\Debug\net8.0\ChatRoom.Tests.csproj.FileListAbsolute.txt" />
+      <Content Include="obj\Debug\net8.0\ChatRoom.Tests.dll" />
+      <Content Include="obj\Debug\net8.0\ChatRoom.Tests.genruntimeconfig.cache" />
+      <Content Include="obj\Debug\net8.0\ChatRoom.Tests.pdb" />
+      <Content Include="obj\Debug\net8.0\ChatRoom.Tests.sourcelink.json" />
+    </ItemGroup>
+
 </Project>

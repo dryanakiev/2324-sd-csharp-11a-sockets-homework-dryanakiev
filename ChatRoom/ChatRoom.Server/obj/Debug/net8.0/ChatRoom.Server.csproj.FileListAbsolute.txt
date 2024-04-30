@@ -26,3 +26,4 @@ C:\Users\didit\RiderProjects\2324-sd-csharp-11a-sockets-homework-dryanakiev\Chat
 C:\Users\didit\RiderProjects\2324-sd-csharp-11a-sockets-homework-dryanakiev\ChatRoom\ChatRoom.Server\obj\Debug\net8.0\ChatRoom.Server.pdb
 C:\Users\didit\RiderProjects\2324-sd-csharp-11a-sockets-homework-dryanakiev\ChatRoom\ChatRoom.Server\obj\Debug\net8.0\ChatRoom.Server.genruntimeconfig.cache
 C:\Users\didit\RiderProjects\2324-sd-csharp-11a-sockets-homework-dryanakiev\ChatRoom\ChatRoom.Server\obj\Debug\net8.0\ref\ChatRoom.Server.dll
+C:\Users\didit\RiderProjects\2324-sd-csharp-11a-sockets-homework-dryanakiev\ChatRoom\ChatRoom.Server\obj\Debug\net8.0\ChatRoom.Server.sourcelink.json

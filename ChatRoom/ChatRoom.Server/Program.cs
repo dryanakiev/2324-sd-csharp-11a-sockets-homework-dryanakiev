@@ -15,9 +15,4 @@ public class Program
 
         serverSocket.StartServer();
     }
-
-    public void SOmethign()
-    {
-        
-    }
 }
