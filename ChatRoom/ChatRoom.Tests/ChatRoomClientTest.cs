@@ -157,4 +157,10 @@ public class ChatRoomClientTest
         // Assert
         Assert.That(receivedMessage, Is.EqualTo("15"));
     }
+
+    [Test]
+    public void Test()
+    {
+        Assert.Pass();
+    }
 }
