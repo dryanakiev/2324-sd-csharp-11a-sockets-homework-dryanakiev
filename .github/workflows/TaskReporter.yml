@@ -1,0 +1,30 @@
+name: Unit Tests
+
+on: [push, pull_request]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+
+    - name: Setup .NET
+      uses: actions/setup-dotnet@v1
+      with:
+        dotnet-version: 6.0.x
+
+    - name: Restore dependencies
+      run: dotnet restore
+
+    - name: Build
+      run: dotnet build --configuration Release
+
+    - name: Test
+      run: dotnet test --logger "trx;LogFileName=test_results.trx" --results-directory ./TestResults/
+      
+    - name: Upload Test Results
+      uses: actions/upload-artifact@v2
+      with:
+        name: Test Results
+        path: ./TestResults
